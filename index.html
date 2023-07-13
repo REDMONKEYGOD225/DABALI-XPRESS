@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dabali Xpress - Accueil</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fireworksjs@1.2.0/dist/fireworks.min.js"></script>
+  <script src="fireworks-js-master/packages/fireworks-js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+
+
+  <link rel="shortcut icon" href="cropped-LOGO-DABALI-EXPRESS-OK.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+</head>
+
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <img src="image/Logo def.jpg" alt="" width="60px" style="border-radius: 20px;">
+      </div>
+      <ul class="navbar-links">
+        <li><a href="#hero-section">Accueil</a></li>
+        <li><a href="#can-section">CAN 2024</a></li>
+        <li><a href="#offres-section">Offres spéciales</a></li>
+        <li><a href="#menus-section">Menu</a></li>
+        <li><a href="#blog-section">Blog</a></li>
+
+        <li><a href="#reseaux-sociaux-section">Nos reseaux</a></li>
+        <li><a href="#about-section">A propos</a></li>
+
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero-section">
+      <video autoplay loop muted playsinline  class="video">
+        <source src="image/DABALI XPRESS.mp4" type="video/mp4" style="width: 100px ;">
+      </video>
+      <div class="hero-content">
+        <h1>Bienvenue chez Dabali Xpress</h1>
+        <p>Découvrez une expérience culinaire africaine unique pendant la CAN 2024 </p>
+
+      </div>
+    </section>
+
+
+    <section id="can-section">
+      <div class="animate__animated animate__bounce animate__repeat-2	2">
+        <div class="container">
+        </div>
+        <br> <br>
+        <div id="CAN">
+          <img src="image/LOGO CAN.png" alt="" width="60px" style="border-radius: 30px;">
+          <h2 style="color: rgb(247, 12, 12); margin-top: -05px;">CAN 2024</h2>
+        </div>
+        <script>
+          gsap.to("#CAN", { duration: 5, x: 0, opacity: 5, rotation: 360 });
+        </script>
+      </div>
+      <p style="color: rgb(255, 255, 255);">La Coupe d'Afrique des Nations 2024 se déroulera du 13 janvier au 11 février en Côte d'Ivoire.</p>
+      <div class="animate__animated animate__fadeInRight ">
+        <div class="teams">
+          <h3 style="color: white;">Équipes en compétition et Joueurs vedettes en lice</h3>
+          <ul>
+            <li>Équipe 1</li>
+            <li>Équipe 2</li>
+            <li>Équipe 3</li>
+            <li>Équipe 4</li>
+            <li>Équipe 5</li>
+            <li>Équipe 6</li>
+            <!-- Ajoutez les autres équipes ici -->
+          </ul>
+        </div>
+      </div> <br>
+      <div class="animate__animated animate__fadeInLeft">
+        <div class="players">
+          <h3 style="color: white; "></h3>
+          
+          <img src="image/Artboard 1 copy.png" alt="" style="width: 400px; margin-top: -250px;" >
+        </div>
+      </div>
+      <div class="animate__animated animate__fadeInRight" style="margin-top: -350px;">
+        <div class="match-dates"style="margin-top: -20px;">
+          <h3 style="color: white;">Dates des matchs</h3>
+          <ul>
+            <li>13 janvier - Match 1</li>
+            <li>15 janvier - Match 2</li>
+            <li>18 janvier - Match 3</li>
+            <!-- Ajoutez les autres dates des matchs ici -->
+          </ul>
+        </div>
+      </div>
+      <div id="countdown-timer" style="margin-top: -50px;">
+        <h3 style="color: white;">Compte à rebours jusqu'à la CAN 2024 :</h3>
+        <div id="timer">
+          <span id="days"></span>
+          <span id="hours"></span>
+          <span id="minutes"></span>
+          <span id="seconds"></span>
+          <script>
+            const nextCANDate = new Date("2024-01-13");
+
+// Fonction pour mettre à jour le compte à rebours
+function updateCountdown() {
+  const currentTime = new Date().getTime();
+  const timeDifference = nextCANDate - currentTime;
+
+  // Calculer les jours, heures, minutes et secondes restantes
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  // Mettre à jour les éléments HTML avec les valeurs du compte à rebours
+  document.getElementById("days").textContent = days + " jours";
+  document.getElementById("hours").textContent = hours + " heures";
+  document.getElementById("minutes").textContent = minutes + " minutes";
+  document.getElementById("seconds").textContent = seconds + " secondes";
+
+  // Répéter la fonction toutes les secondes
+  setTimeout(updateCountdown, 1000);
+}
+
+// Appeler la fonction pour démarrer le compte à rebours
+updateCountdown();
+          </script>
+        </div>
+      </div>
+    </section>
+    
+
+
+    </div>
+    <section id="offres-section" style="margin-top: -250px;">
+     
+        <div id="fireworks"></div>
+      <div class="container" id="fireworks-container">
+        <h2>Offres spéciales</h2>
+        <H3>Venez découvrir nos ofres spéciales pour cette Can 2024</H3>
+        <div class="special-offers">
+          <div class="offer">
+            <img src="image/COUP1.png" alt="Offre spéciale 1">
+            <h3>Menu Coupe d'Afrique</h3>
+            <p>Découvrez notre délicieux menu spécial Coupe d'Afrique comprenant des plats traditionnels africains.</p>
+            <a href="#reservation-section">Réserver maintenant</a>
+          </div>
+          <div class="offer">
+            <img src="image/Boisson.png" alt="Offre spéciale 2">
+            <h3>Boisson Rafraîchissante</h3>
+            <p>Profitez de notre boisson rafraîchissante spéciale Coupe d'Afrique pour vous désaltérer pendant les
+              matchs.</p>
+            <a href="#reservation-section">Réserver maintenant</a>
+          </div>
+          <div class="offer">
+            <img src="image/Plat joueur.png" alt="Offre spéciale 3">
+            <h3>Plat du Joueur Étoile</h3>
+            <p>Essayez notre plat du Joueur Étoile, inspiré par les saveurs africaines et approuvé par les footballeurs
+              célèbres.</p>
+            <a href="#reservation-section">Réserver maintenant</a>
+          </div>
+          <div class="offer">
+            <img src="image/brunch.png" alt="Offre spéciale 3">
+            <h3>Brunch spécial pré-Can</h3>
+            <p>Venez participer à une expérience unique lors de notre brunch spécial pré-Can pour vivre une expérience
+              hors du commun .</p>
+            <a href="#reservation-section">Réserver maintenant</a>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    <section id="menus-section" style="margin-top: -120px;">
+      <div class="container">
+        <h2>Menu</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="image/sauce1.png" alt="Menu 2">
+            <h3>Sauce Gombo</h3>
+            <p>Un délicieux plat africain traditionnel préparé avec des ingrédients frais et savoureux et
+              acommpagnements </p>
+            <span class="price">5500 F</span>
+          </div>
+
+          <div class="menu-item">
+            <img src="image/sauce2.png" alt="Menu 2">
+            <h3>Délicieux crabe</h3>
+            <p>Un crabe dans une sauce inspiré des saveurs africaines, avec des épices uniques.</p>
+            <span class="price">4500 F</span>
+          </div>
+          <div class="menu-item">
+            <img src="image/sauce3.png" alt="Menu 3">
+            <h3>Sauce graine</h3>
+            <p>Un poulet tendre et juteux servie dans une sauce graine spéciale avec des accompagnements
+              africains.</p>
+            <span class="price">3000 F</span>
+          </div>
+
+          <div id="image-container" class="hidden">
+            <img id="image" src="" alt="Image">
+          </div>
+          <button id="btn-fermer" onclick="fermerImage()">Fermer</button>
+          <a href="#" style="justify-content: center; background-color: orangered;" class="offer"
+            onclick="afficherImage()">Voir Plus</a>
+
+          <a href="#order-form" style="justify-content: center; background-color: orangered;" class="offer"
+            onclick="toggleOrderForm()">Commander</a>
+
+          <div id="order-form" class="hidden">
+            <h2>Formulaire de commande</h2>
+            <form>
+              <form>
+                <div class="form-group">
+                  <label for="name">Nom :</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email :</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone :</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="address">Adresse :</label>
+                  <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="food">Plat :</label>
+                  <select id="food" name="food" required>
+                    <option value="">Sélectionnez un plat</option>
+                    <option value="plat1">Plat 1</option>
+                    <option value="plat2">Plat 2</option>
+                    <option value="plat3">Plat 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="quantity">Quantité :</label>
+                  <input type="number" id="quantity" name="quantity" min="1" required>
+                </div> <br>
+                <div class="form-group">
+                  <button type="submit">Valider la commande</button>
+                </div>
+              </form>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- Autres champs de formulaire -->
+
+
+
+    <section id="blog-section">
+      <div class="container">
+        <h2>Blog et Actualités</h2>
+        <div class="blog-posts">
+          <div class="blog-post">
+            <img src="image/Joueurs best.png" alt="Article 1">
+            <h3>Les meilleures équipes de la CAN 2024</h3>
+            <p>Découvrez les équipes les plus prometteuses de la Coupe d'Afrique des Nations 2024 et leurs stars.</p>
+            <a href="https://www.vudaf.com/sports/top-10-meilleures-equipes-africaines-football-tous-temps/" class="read-more">Lire l'article</a>
+          </div>
+          <div class="blog-post">
+            <img src="image/support.png" alt="Article 2">
+            <h3>Les supporters africains : passion et ferveur</h3>
+            <p>Explorez l'ambiance incroyable des supporters africains pendant la CAN 2024 et leur passion pour le
+              football.</p>
+            <a href="https://www.jeuneafrique.com/1309182/societe/can-entre-camerounais-et-ivoiriens-un-match-des-supporters-memorable/" class="read-more">Lire l'article</a>
+          </div>
+          <div class="blog-post">
+            <img src="image/Cuisine Africaine.png" alt="Article 3">
+            <h3>Cuisine africaine : des saveurs exquises</h3>
+            <p>Découvrez les délices de la cuisine africaine et traditionnel servis pendant cette CAN. Vous ne serez que
+              conquis par les saveurs des plats de la cuisine africaine en une bouchée</p>
+            <a href="https://www.sikafinance.com/marches/dabali-xpress-ouvre-un-4eme-fast-food-a-abidjan-plateau_37682" class="read-more">Lire l'article</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="reseaux-sociaux-section">
+      <div class="reseaux-sociaux-content">
+        <h2>Suivez-nous sur les réseaux sociaux</h2>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/profile.php?id=100094071611139&sk=photos_by" class="icon"><i class="fab fa-facebook"></i></a>
+
+          <a href="https://www.instagram.com/dabali_xpress_225/" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+    <section id="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>À Propos de Nous</h2>
+            <p>Dabali Xpress est le premier fast food made in Côte d'Ivoire spécialisé dans la cuisine africaine. Nous
+              sommes passionnés par la valorisation des plats africains et ivoiriens, et nous nous efforçons de faire
+              découvrir ces délices culinaires aux amateurs de gastronomie.</p>
+            <p>Notre équipe de chefs talentueux prépare des plats traditionnels avec des ingrédients frais et de
+              qualité. Nous mettons un accent particulier sur les saveurs authentiques de l'Afrique et nous nous
+              engageons à offrir une expérience culinaire unique à nos clients.</p>
+            <p>Que vous soyez un fan de football, un amateur de cuisine africaine ou simplement curieux de découvrir de
+              nouveaux goûts, Dabali Xpress est l'endroit idéal pour vous. Rejoignez-nous pour vivre une expérience
+              gustative exceptionnelle et vibrer au rythme du football africain.</p>
+          </div>
+          <div class="about-image">
+            <img src="image/DB EC2.png" alt="À Propos de Nous">
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <h1>NOTRE EQUIPE DIRIGEANTE</h1>
+          <div style="display: flex; justify-content: space-around;">
+            <div>
+              <img src="image/326750985_503149858600286_1825680931213972999_n.jpg" alt="" style="height: 300px;">
+              <h3>OLIVIA AGGRE</h3>
+              <h3>DIRECTRICE GENERALE</h3>
+            </div>
+            <div>
+              <img src="image/DGA.jpg" alt="" style="height: 300px;">
+              <h3>ABRAHAM ANOH</h3>
+              <h3>DIRECTEUR GENERAL ADJOIN</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <h1 style="text-align: center;">NOTRE EQUIPE</h1>
+
+          <div style="display: flex; justify-content: space-around;">
+
+            <div>
+              <img src="image/STAFF 1.jpg" alt="" style="width: 300px;">
+              <h3 style="text-align: center;"> NOTRE STAFF</h3>
+            </div>
+
+            <div>
+              <img src="image/CHEF CUISINIERS.jpg" alt="" style="width: 300px;">
+              <h3 style="text-align: center;">NOS CHEFS CUISINIERS</h3>
+            </div>
+
+            <div>
+              <img src="image/STAFF 2.jpg" alt="" style="width: 300px;">
+              <h3 style="text-align: center;">NOTRE STAFF</h3>
+            </div>
+
+          </div>
+          <h1 style="text-align: center;"> Espace Dabaly</h1>
+          <div style="display: flex; justify-content: space-between; margin: 30px;">
+
+            <div>
+              <video autoplay loop muted plays-inline style="width: 500px; ">
+                <source src="image/DABALI TRAITEUR (online-video-cutter.com).mp4" type="video/mp4">
+              </video>
+              <video autoplay loop muted plays-inline style="width: 500px;">
+                <source src="image/Dabali xpress le fast-food avec la nourriture ivoirienne et africaine (online-video-cutter.com).mp4" type="video/mp4">
+              </video>
+              <video autoplay loop muted plays-inline style="width: 500px;">
+                <source src="image/Le petit dejeuner à livoirienne avec DABALI XPRESS (online-video-cutter.com).mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h1 style="text-align: center;"> Notre position géographique </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d127119.26614571206!2d-4.0645725!3d5.3439051!3m2!1i1024!2i768!4f13.1!2m1!1sdabali%20express!5e0!3m2!1sfr!2sci!4v1687313777447!5m2!1sfr!2sci"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"> </iframe>
+
+        </div>
+
+    </section>
+
+
+    <button class="openbutton" onclick="openDialog()"><i class="fas fa-comments"></i></button>
+
+    <div id="dialog" class="dialog">
+      <div id="dialogTitle" style="text-align: center;">Bonjour que pouvons-nous faire pour vous?</div>
+      <div id="dialogContent">
+        <div id="chatMessages"></div>
+        <div id="userInput">
+          <input type="text" id="messageInput" placeholder="Votre message..." style="margin-left: 10px;">
+
+          <button onclick="sendMessage()" class="buttonn">Envoyer</button>
+          <button onclick="closeDialog()" class="buttonn">Fermer</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <br>
+  <footer>
+    <p> <img src="image/Logo def.jpg" alt="" width="60px" style="border-radius: 20px;">
+      &copy; 2023 DABALI XPRESS. Tous droits réservés.</p>
+  </footer>
+</body>
+
+</html>

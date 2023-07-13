@@ -1,0 +1,159 @@
+/* Styles pour la page d'accueil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  header {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+  }
+  
+  header.scrolled {
+    background-color: rgba(164, 164, 164, 0.8);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f28c17;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #cb7f14;
+  }
+  
+  /* Hero section */
+  .hero-content {
+    text-align: center;
+    animation: fadeInUp 1s ease;
+    color: #ffffff;
+    margin-top: -339px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .scroll-down:hover {
+    background-color: #d38004;
+  }
+  
+  /* Sections */
+  section {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Réseaux sociaux */
+  .social-media-icons {
+    margin-top: 30px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .social-media-icons .icon {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 40px;
+    color: #941d1d;
+    transition: color 0.3s ease;
+    animation: fadeIn 1s ease;
+  }
+  
+  .social-media-icons .icon:hover {
+    color: #ff9800;
+  }
+  
+  /* Blog et actualités */
+  .blog-content .blog-post {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .blog-post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .read-more {
+    color: #ff9800;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    color: #ef9b47;
+  }
+  
+  #can-section {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  #can-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  #can-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }  
+  
